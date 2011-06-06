@@ -3,7 +3,7 @@
 <!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" manifest="cache.appcache"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -31,37 +31,58 @@
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <script src="js/libs/modernizr-1.7.min.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+	
 
 </head>
 
 <body>
 
   <div id="container">
-    <header>
-		<h1>Coming Soon</h1>
-		Sorry, we are currently under construction. 
-    </header>
-    <div id="main" role="main">
+  	<header>
+		<h1>Follo<span>w</span><span class="surlign_619A00">W</span><span>w</span>hat</h1>
+		<h2>Under construction, Coming Soon !</h2>
+	</header>
+	<div id="main" role="main">
 		<section>
 			<article>
-				<header>Site will launch in</header>
-				227 Days 5 Hours 32 Minutes 26 secondes
-				Launch date : 
-				consctruction progress : <progress value=25 max=100><span id=progress-pourcent >25</span>%</progress>
-				<meter min=0 max=100 value=75><span id=meter-pourcent >25</span>%</meter>
+				<header><h1>Under construction, Coming Soon !</h1></header>
+				<div class="article-content">
+					<p>Sorry, we are currently under construction. With this page, you can learn more about us and Followhat site.</p>
+					<h2>About this site :</h2>
+					<p></p>
+					<h2>Site will launch in :</h2>
+					<p id=countDown>
+						<span>30</span><span>Days</span><span>5</span><span>Hours</span><span>32</span><span>Minutes</span><span>26</span><span>Secondes</span>
+					</p>
+					<p>
+						Launch date : <span id=launch-date></span><br />
+						consctruction progress : <meter min=0 max=100 id=meter />
+						<span id=meter-percent >15</span>%
+						<div id="progressbar" class=hidden ></div>
+					</p>
+					<h2>Get notified about our launch !</h2>
+					<p>
+						<div class=recipient></div>
+						<form id=launch-notification  method=post action="php/newsletter-suscribe.php">
+							<input type=email id=launch-notification-email name=launch-notification-email placeholder=email@provider.com size=35 />
+							<input type=submit id=launch-notification-submit value="Notify me" />
+						</form>
+					</p>
+				</div>
+				<footer></footer>
 			</article>
-			<article>
-				<header>Get notified about our launch !</header>
-				<form id=launch-notification>
-					<input type=email id=email name=email placeholder=email@provider.com size=35 />
-					<input type=submit id=submit value="Notified me" />
-				</form>
-			</article>
-			Follow us on : 
 		</section>
-    </div>
-    <footer>
-
+	</div>
+	<footer>	
+		<div>
+			<ul>
+				<li><a href=http:///www.twitter.com/followWwhat title="Follow us on Twitter" target=_blank><figure><img src=img/twitter-logo.png alt="Follow us on Twitter" width=32 /><figcaption class=hidden >Follow us on Twitter</figcaption></figure></a></li>
+				<li><a href=http:///www.facebook.com/pages/Followhat/196322280412176 title="Facebook Page of followWwhat" target=_blank><figure><img src=img/facebook-logo.png alt="Facebook Page of followWwhat" width=32 /><figcaption class=hidden>Facebook Page of followWwhat</figcaption></figure></a></li>
+			</ul>
+		</div>
     </footer>
   </div> <!--! end of #container -->
 
@@ -69,9 +90,9 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='js/libs/jquery-1.6.min.js'>\x3C/script>")</script>
-
+  <script src='js/libs/jquery.progressbar.min.js'></script>
 
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
@@ -80,10 +101,7 @@
 
 
 	<script>
-	  var progressBar = document.getElementById('progress-pourcent');
-	  function updateProgress(newValue) {
-	    progressBar.textContent = newValue;
-	  }
+
 	</script>
 
   <!--[if lt IE 7 ]>
@@ -94,9 +112,9 @@
 
   <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
   <script>
-    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+    var _gaq=[["_setAccount","UA-12707035-7"],["_trackPageview"],["_trackPageLoadTime"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    g.src=("https:"==location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
   </script>
 
